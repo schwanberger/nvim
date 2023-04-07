@@ -9,10 +9,10 @@ local M = {
         require("dapui").setup()
       end,
     },
-    { "jbyuki/one-small-step-for-vimkind" },
-    { "theHamsta/nvim-dap-virtual-text", config = true },
-    { "mfussenegger/nvim-dap-python" },
-    { "Pocco81/dap-buddy.nvim" },
+    -- { "jbyuki/one-small-step-for-vimkind" },
+    -- { "theHamsta/nvim-dap-virtual-text", config = true },
+    -- { "mfussenegger/nvim-dap-python" },
+    --{ "Pocco81/dap-buddy.nvim" },
   },
 }
 
@@ -57,7 +57,7 @@ end
 function M.config()
   local dap = require("dap")
   local dapui = require("dapui")
-  vim.fn.sign_define("DapBreakpoint", { text = "🏓", texthl = "RED", linehl = "RED", numhl = "RED" })
+  vim.fn.sign_define("DapBreakpoint", { text = "🏓", texthl = "", linehl = "", numhl = "" })
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open({})
   end

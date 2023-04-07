@@ -1,5 +1,4 @@
 return {
-  lazy = false,
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
