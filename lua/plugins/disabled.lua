@@ -4,10 +4,11 @@
 return {
   {
     "folke/noice.nvim",
+    lazy = false,
     enabled = false,
   },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   enabled = false,
+  -- },
 }
