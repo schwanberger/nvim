@@ -17,5 +17,16 @@ return {
       position = "right",
     },
   },
-  { import = "plugins.langs" },
+  {
+    "folke/zen-mode.nvim",
+    keys = { { "<leader>cz", "<cmd>ZenMode<cr>", desc = "Enter Zen-mode" } },
+    config = function()
+      require("zen-mode").setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      })
+    end,
+  },
+  { import = "plugins.langs", lazy = true },
 }
