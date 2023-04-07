@@ -37,14 +37,12 @@ return {
         null_ls.builtins.formatting.isort,
         null_ls.builtins.diagnostics.flake8,
         null_ls.builtins.diagnostics.mypy,
-        -- null_ls.builtins.formatting.gofmt
       })
     end,
   },
   {
     "mfussenegger/nvim-dap-python",
     config = function()
-      --require("dap-python").setup("python3", {})
       require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
     end,
   },
