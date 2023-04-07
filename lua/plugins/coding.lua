@@ -29,5 +29,11 @@ return {
       })
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    event = "VeryLazy",
+    version = "*",
+    config = true,
+  },
   { import = "plugins.langs", lazy = true },
 }
