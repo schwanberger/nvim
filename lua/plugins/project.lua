@@ -1,11 +1,19 @@
 return {
   {
     "ahmedkhalf/project.nvim",
+    event = "VeryLazy",
     keys = {
-      { "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Find project" },
+      {
+        "<leader>fp",
+        function()
+          require("telescope").extensions.projects.projects({})
+        end,
+        desc = "Find project",
+      },
     },
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
+      local telescope = require("telescope")
       require("project_nvim").setup({
         manual_mode = false,
         detection_methods = { "lsp", "pattern" },
@@ -18,7 +26,7 @@ return {
         datapath = vim.fn.stdpath("data"),
       })
 
-      require("telescope").load_extension("projects")
+      telescope.load_extension("projects")
     end,
   },
 }

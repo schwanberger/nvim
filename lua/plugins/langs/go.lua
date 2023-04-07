@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy",
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
@@ -11,6 +12,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
     opts = {
       servers = {
         golangci_lint_ls = {},
@@ -20,6 +22,7 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    event = "VeryLazy",
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
@@ -45,6 +48,7 @@ return {
   -- Add gopher.nvim
   {
     "olexsmir/gopher.nvim",
+    event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
     config = true,
   },
@@ -52,6 +56,7 @@ return {
   -- setup gofmt for golang
   {
     "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
     opts = function(_, opts)
       local null_ls = require("null-ls")
       opts.sources = vim.list_extend(opts.sources, {
@@ -62,6 +67,7 @@ return {
   },
   {
     "leoluz/nvim-dap-go",
+    event = "VeryLazy",
     config = function()
       require("dap-go").setup()
     end,

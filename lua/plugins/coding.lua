@@ -3,6 +3,7 @@ return {
   -- also adding autocomplete, lsp servers and debuggers on a per language basis
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy",
     opts = {
       ignore_install = { "help" },
       ensure_installed = { "lua" },
