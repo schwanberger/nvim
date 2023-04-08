@@ -166,7 +166,7 @@ return {
     event = "VeryLazy",
     opts = {
       --colorscheme = "dayfox",
-      -- colorscheme = "catppuccin",
+      --colorscheme = "catppuccin",
       --colorscheme = "tokyonight-day",
       --colorscheme = "modus-operandi",
       --colorscheme = "modus-vivendi",
