@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "python",
@@ -9,6 +10,7 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    event = "VeryLazy",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "pyright",
@@ -22,6 +24,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
     opts = {
       servers = {
         pyright = {},
@@ -30,6 +33,7 @@ return {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
     opts = function(_, opts)
       local null_ls = require("null-ls")
       opts.sources = vim.list_extend(opts.sources, {
@@ -42,6 +46,7 @@ return {
   },
   {
     "mfussenegger/nvim-dap-python",
+    event = "VeryLazy",
     config = function()
       require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
     end,

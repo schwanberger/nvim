@@ -4,9 +4,24 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = "VeryLazy",
+    dependencies = {
+      { "nvim-treesitter/nvim-treesitter-context", opts = { mode = "topline" } },
+    },
     opts = {
       ignore_install = { "help" },
       ensure_installed = { "lua" },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    keys = {
+      { "<leader>ut", "<cmd>TSContextToggle<cr>", desc = "Toggle treesitter context" },
+    },
+    opts = {
+      line_numbers = false,
+      max_lines = 4,
+      mode = "topline",
+      trim_scope = "inner",
     },
   },
   {

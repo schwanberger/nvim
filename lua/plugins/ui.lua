@@ -1,4 +1,5 @@
 return {
+  { "EdenEast/nightfox.nvim", event = "VeryLazy" },
   { "ellisonleao/gruvbox.nvim", event = "VeryLazy" },
   {
     "catppuccin/nvim",
@@ -11,7 +12,7 @@ return {
           light = "latte",
           dark = "mocha",
         },
-        transparent_background = false,
+        transparent_background = true,
       })
     end,
   },
@@ -85,7 +86,7 @@ return {
     },
     opts = {
       options = {
-        tab_size = 0,
+        --tab_size = 0,
         show_buffer_close_icons = false,
         show_close_icon = false,
         always_show_bufferline = true,
@@ -116,6 +117,52 @@ return {
         command_palette = false,
         lsp_doc_border = true,
       },
+    },
+  },
+  -- Undo history visualizer
+  {
+    "mbbill/undotree",
+    keys = {
+      { "<leader>uu", "<Cmd>UndotreeToggle<CR>", desc = "Toggle undo tree" },
+    },
+  },
+
+  -- Auto-resize windows according to golden ratio
+  -- {
+  --   "beauwilliams/focus.nvim",
+  --   event = "VimEnter",
+  --   keys = {
+  --     { "yogv", "<Cmd>FocusToggle<CR>", desc = "toggle golden ratio view" },
+  --   },
+  --   opts = function(_, opts)
+  --     opts.excluded_filetypes = opts.excluded_filetypes or {}
+  --     vim.list_extend(opts.excluded_filetypes, { "fugitive", "gitcommit", "Outline" })
+  --     opts.signcolumn = false
+  --     return opts
+  --   end,
+  -- },
+  {
+    "max397574/better-escape.nvim",
+    opts = {
+      mapping = { "jk" },
+    },
+  },
+  {
+    "folke/tokyonight.nvim",
+    config = function()
+      require("tokyonight").setup({
+        --transparent = true,
+        style = "night",
+      })
+    end,
+  },
+  {
+    "LazyVim/LazyVim",
+    event = "VeryLazy",
+    opts = {
+      colorscheme = "dayfox",
+      -- colorscheme = "catppuccin",
+      --colorscheme = "tokyonight-moon",
     },
   },
 }

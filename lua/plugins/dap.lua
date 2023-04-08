@@ -91,20 +91,19 @@ return {
   {
     "mfussenegger/nvim-dap",
     keys = {
-        { "<leader>dd", function() require("dapui").toggle() end, desc = "debug: toggle UI" },
-        { "<leader>dc", function() require("dap").continue() end, desc = "debug: continue" },
-        { "<leader>dj", function() require("dap").step_over() end, desc = "debug: step over" },
-        { "<leader>dl", function() require("dap").step_into() end, desc = "debug: step into" },
-        { "<leader>dh", function() require("dap").step_out() end, desc = "debug: step out" },
-        { "<leader>da", function() require("dap").run_last() end, desc = "debug: run last" },
-        { "<leader>dr", function() require("dap").restart() end, desc = "debug: restart session" },
-        { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "debug: toggle breakpoint" },
-        { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, desc = "debug: toggle conditional breakpoint" },
-        { "<leader>dt", function() require("dap").terminate() end, desc = "debug: terminate session" },
+            { "<leader>dd", function() require("dapui").toggle() end, desc = "debug: toggle UI" },
+            { "<leader>dc", function() require("dap").continue() end, desc = "debug: continue" },
+            { "<leader>dj", function() require("dap").step_over() end, desc = "debug: step over" },
+            { "<leader>dl", function() require("dap").step_into() end, desc = "debug: step into" },
+            { "<leader>dh", function() require("dap").step_out() end, desc = "debug: step out" },
+            { "<leader>da", function() require("dap").run_last() end, desc = "debug: run last" },
+            { "<leader>dr", function() require("dap").restart() end, desc = "debug: restart session" },
+            { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "debug: toggle breakpoint" },
+            { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, desc = "debug: toggle conditional breakpoint" },
+            { "<leader>dt", function() require("dap").terminate() end, desc = "debug: terminate session" },
         },
     dependencies = {
       { "rcarriga/nvim-dap-ui", config = true },
-      { "leoluz/nvim-dap-go", config = true },
       {
         "theHamsta/nvim-dap-virtual-text",
         opts = {
