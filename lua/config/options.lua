@@ -39,3 +39,6 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.clipboard = ""
 --vim.opt.cmdheight = 0
+--
+
+vim.opt.guifont = "JetBrainsMono NF:h14"

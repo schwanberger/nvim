@@ -149,6 +149,7 @@ return {
   },
   {
     "folke/tokyonight.nvim",
+    event = "VeryLazy",
     config = function()
       require("tokyonight").setup({
         --transparent = true,
@@ -157,12 +158,18 @@ return {
     end,
   },
   {
+    "ishan9299/modus-theme-vim",
+    event = "VeryLazy",
+  },
+  {
     "LazyVim/LazyVim",
     event = "VeryLazy",
     opts = {
-      colorscheme = "dayfox",
+      --colorscheme = "dayfox",
       -- colorscheme = "catppuccin",
-      --colorscheme = "tokyonight-moon",
+      --colorscheme = "tokyonight-day",
+      --colorscheme = "modus-operandi",
+      --colorscheme = "modus-vivendi",
     },
   },
 }
