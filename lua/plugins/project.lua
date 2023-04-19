@@ -3,14 +3,8 @@ return {
     "ahmedkhalf/project.nvim",
     event = "VeryLazy",
     keys = {
-      {
-        "<leader>fp",
-        function()
-          require("telescope").extensions.projects.projects({})
-        end,
-        desc = "Find project",
-      },
-    },
+            { "<leader>fp", function() require("telescope").extensions.projects.projects({}) end, desc = "Find project" },
+        },
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
       local telescope = require("telescope")

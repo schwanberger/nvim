@@ -161,15 +161,23 @@ return {
     "ishan9299/modus-theme-vim",
     event = "VeryLazy",
   },
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "rmehri01/onenord.nvim" },
   {
     "LazyVim/LazyVim",
     event = "VeryLazy",
     opts = {
       --colorscheme = "dayfox",
+      colorscheme = "nightfox",
       --colorscheme = "catppuccin",
       --colorscheme = "tokyonight-day",
+      --colorscheme = "tokyonight-moon",
       --colorscheme = "modus-operandi",
       --colorscheme = "modus-vivendi",
+      --colorscheme = "onedark",
+      --colorscheme = "dracula",
+      --colorscheme = "rose-pine",
+      --colorscheme = "onenord",
     },
   },
 }
